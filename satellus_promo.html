@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛特勒斯集团 | 磁悬浮技术解决方案领导者</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+        
+        /* 头部区域 */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .logo span {
+            color: #4a9eff;
+        }
+        
+        .tagline {
+            font-size: 24px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #4a9eff;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 158, 255, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #3a8eef;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 158, 255, 0.5);
+        }
+        
+        /* 公司介绍 */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #1e3a5f;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #4a9eff;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        
+        .about-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4ff 100%);
+            border-left: 4px solid #4a9eff;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box p {
+            color: #1e3a5f;
+            font-weight: 500;
+        }
+        
+        /* 产品展示 */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .product-header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 25px;
+        }
+        
+        .product-header h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        
+        .product-header .en {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .product-body {
+            padding: 25px;
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            color: #4a9eff;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .product-specs {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* 应用领域 */
+        .applications {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+        
+        .app-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            padding: 25px 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s ease;
+        }
+        
+        .app-item:hover {
+            border-color: #4a9eff;
+            box-shadow: 0 4px 15px rgba(74, 158, 255, 0.15);
+        }
+        
+        .app-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .app-item h4 {
+            color: #1e3a5f;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .app-item p {
+            font-size: 12px;
+            color: #888;
+        }
+        
+        /* 核心优势 */
+        .advantages {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 60px 20px;
+        }
+        
+        .advantages .section-title {
+            color: white;
+        }
+        
+        .advantages .section-title::after {
+            background: #4a9eff;
+        }
+        
+        .adv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+        
+        .adv-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .adv-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #4a9eff;
+            margin-bottom: 10px;
+        }
+        
+        .adv-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .adv-item p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        /* 合作伙伴 */
+        .partners {
+            padding: 60px 20px;
+            background: #f5f7fa;
+        }
+        
+        .partners-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #666;
+        }
+        
+        .partners-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .partner-tag {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #555;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        
+        /* 联系方式 */
+        .contact {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4ff 100%);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .contact-box h3 {
+            color: #1e3a5f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-box p {
+            color: #555;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        
+        .contact-cta {
+            display: inline-block;
+            background: #1e3a5f;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-cta:hover {
+            background: #2d5a87;
+            transform: translateY(-2px);
+        }
+        
+        /* 页脚 */
+        .footer {
+            background: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 50px 20px;
+            }
+            
+            .logo {
+                font-size: 32px;
+            }
+            
+            .tagline {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo">ZEIT<span>LOS</span></div>
+            <h1 class="tagline">赛特勒斯集团</h1>
+            <p class="subtitle">磁悬浮鼓风机 / 磁悬浮压缩机 / 磁悬浮控制系统 / 高温热泵机组解决方案创新者<br>
+            INNOVATOR IN MAGLEV BLOWERS, MAGLEV COMPRESSORS, MAGLEV CONTROL SYSTEMS & HIGH-TEMPERATURE HEAT PUMP UNITS</p>
+            <a href="#contact" class="cta-button">立即咨询合作</a>
+        </div>
+    </section>
+
+    <!-- 公司介绍 -->
+    <section class="section">
+        <h2 class="section-title">关于赛特勒斯</h2>
+        <div class="about-content">
+            <p class="about-text">
+                赛特勒斯集团由国内外多名行业专家领衔，致力于以磁悬浮轴承系统及传动解决方案为核心，利用技术、管理和市场优势，针对不同行业客户的特点和需求，提供绿色、高效、稳定的磁悬浮控制系统及磁悬浮高速永磁同步电机、磁悬浮鼓风机、磁悬浮压缩机、高温热泵机组、航天卫星和医疗产品。
+            </p>
+            <div class="highlight-box">
+                <p>💡 公司长期与众多知名品牌企业建立了良好、稳固的合作伙伴关系，形成了一个具有强大生命力，相互依存，共同发展的合作机制。</p>
+            </div>
+            <p class="about-text">
+                赛特勒斯集团与德国ZEITLOS公司保持长期密切的合作，本公司信奉："品质第一，顾客至上"的原则，在磁悬浮控制系统、高速电机等方面提供高效传动解决方案，公司拥有多项发明专利。赛特勒斯集团已在磁悬浮鼓风机、磁悬浮压缩机、余温余热发电等多个领域为包括格力电器、沈鼓集团、中船重工、河钢集团、航发等大型公司提供服务并得到客户好评。
+            </p>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="advantages">
+        <h2 class="section-title">六大核心优势</h2>
+        <div class="adv-grid">
+            <div class="adv-item">
+                <div class="adv-number">30%</div>
+                <h4>高效节能</h4>
+                <p>与传统罗茨风机相比，节能30%以上</p>
+            </div>
+            <div class="adv-item">
+                <div class="adv-number">&lt;80dB</div>
+                <h4>低噪音无振动</h4>
+                <p>噪音低于80分贝，无振动，无需地基</p>
+            </div>
+            <div class="adv-item">
+                <div class="adv-number">20+</div>
+                <h4>长寿命半永久</h4>
+                <p>20年以上设计寿命，生命周期内效率不衰减</p>
+            </div>
+            <div class="adv-item">
+                <div class="adv-number">0</div>
+                <h4>无润滑免维护</h4>
+                <p>100%无油磁悬浮轴承系统，无需定期养护</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section class="section">
+        <h2 class="section-title">核心产品</h2>
+        <div class="products-grid">
+            <!-- 产品1 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>磁悬浮鼓风机</h3>
+                    <span class="en">Magnetic Levitation Blower</span>
+                </div>
+                <div class="product-body">
+                    <ul class="feature-list">
+                        <li>采用五自由度主动磁悬浮轴承和高速永磁同步电机</li>
+                        <li>运用领先的透平机械设计技术研制</li>
+                        <li>高速永磁同步电机和高效三元流叶轮直连</li>
+                        <li>无接触、无摩擦、无需润滑</li>
+                        <li>叶轮采用高强度铝/钛合金，经过100%X射线探伤</li>
+                        <li>变频智能化控制，支持就地/远程控制</li>
+                    </ul>
+                    <div class="product-specs">
+                        <strong>功率范围：</strong>风冷 55kW~185kW | 液冷 185kW+<br>
+                        <strong>综合优势：</strong>比罗茨风机节能30%，噪音低于80分贝
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品2 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>磁悬浮高温热泵机组</h3>
+                    <span class="en">Maglev High-Temp Heat Pump Unit</span>
+                </div>
+                <div class="product-body">
+                    <ul class="feature-list">
+                        <li><strong>高效节能：</strong>替代燃煤燃气锅炉，利用热源侧18~38℃制取60~80℃高温热水</li>
+                        <li><strong>绿色环保：</strong>HFC-134a环保冷媒，零臭氧破坏，无粉尘废气排放</li>
+                        <li><strong>安装便捷：</strong>安装便捷、高效节能、绿色环保</li>
+                        <li><strong>稳定可靠：</strong>严格按照GB/T19409及GB/T25861-2010标准设计制造</li>
+                    </ul>
+                    <div class="product-specs">
+                        <strong>性能参数：</strong>热源进水温度38℃，热水出水温度70℃，满载性能COP可达4.12以上
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品3 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>磁悬浮透平真空泵</h3>
+                    <span class="en">Magnetic Suspension Turbovacuum Pump</span>
+                </div>
+                <div class="product-body">
+                    <ul class="feature-list">
+                        <li>将磁悬浮轴承技术、高速电机技术、变频控制技术、三元流叶轮技术融入传统透平真空泵</li>
+                        <li>高效、节能、环保的新型透平真空泵</li>
+                        <li>高速旋转叶轮将动能转换成气体压力势能</li>
+                        <li>形成负压真空，经过蜗壳后转换成高温气体排出</li>
+                    </ul>
+                    <div class="product-specs">
+                        <strong>节能效果：</strong>与传统真空泵相比，节能20%-30%
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品4 -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h3>核心部件</h3>
+                    <span class="en">Core Components</span>
+                </div>
+                <div class="product-body">
+                    <ul class="feature-list">
+                        <li><strong>磁悬浮轴承控制器：</strong>全数码控制器，五个自由度精准计算调控</li>
+                        <li><strong>永磁高速主机：</strong>效率可达96%以上，最高转速可达100000r/min</li>
+                        <li><strong>PLC电控系统：</strong>国际品牌PLC，实时监控系统运行数据</li>
+                        <li><strong>智能操作面板：</strong>人性化触摸屏，支持多种通讯协议</li>
+                        <li><strong>高效变频器：</strong>知名品牌变频器，工作频率400~1500Hz</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用领域 -->
+    <section class="applications">
+        <h2 class="section-title">应用领域</h2>
+        <div class="apps-grid">
+            <div class="app-item">
+                <div class="app-icon">💧</div>
+                <h4>废水污水处理</h4>
+                <p>Sewage & Wastewater</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">🏭</div>
+                <h4>冶金行业</h4>
+                <p>Metallurgical Industry</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">🛢️</div>
+                <h4>石油化工</h4>
+                <p>Petrochemical Industry</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">💊</div>
+                <h4>制药行业</h4>
+                <p>Pharmaceutical Industry</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">📄</div>
+                <h4>纸浆制造</h4>
+                <p>Pulp Manufacturing</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">👢</div>
+                <h4>皮革制造</h4>
+                <p>Leather Manufacturing</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">⚡</div>
+                <h4>电热行业</h4>
+                <p>Electric Heating Industry</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">🏗️</div>
+                <h4>水泥建材</h4>
+                <p>Cement & Building Materials</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">🐟</div>
+                <h4>水产养殖</h4>
+                <p>Aquaculture Industry</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">🧵</div>
+                <h4>纺织印染</h4>
+                <p>Textile & Printing</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">🍞</div>
+                <h4>食品行业</h4>
+                <p>Food Industry</p>
+            </div>
+            <div class="app-item">
+                <div class="app-icon">🔋</div>
+                <h4>电子行业</h4>
+                <p>Electronics Industry</p>
+            </div>
+        </div>
+        
+        <div style="max-width: 900px; margin: 40px auto 0; padding: 30px; background: #f8f9fa; border-radius: 12px;">
+            <h3 style="color: #1e3a5f; margin-bottom: 20px; text-align: center;">具体应用场景</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; font-size: 15px; color: #555;">
+                <div>✓ 废水、污水处理厂的空气供给</div>
+                <div>✓ 水泥、钢铁行业的粉体/颗粒输送</div>
+                <div>✓ 化工的粉体/颗粒输送</div>
+                <div>✓ 制药、生物发酵</div>
+                <div>✓ 水产养殖供气/搅拌</div>
+                <div>✓ 脱硫脱硝、电镀</div>
+                <div>✓ 逆洗、喷砂、烘干</div>
+                <div>✓ 造纸、纺织、印染</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作伙伴 -->
+    <section class="partners">
+        <h2 class="section-title">合作伙伴</h2>
+        <p class="partners-text">
+            赛特勒斯集团已为众多行业领军企业提供专业服务，获得客户广泛好评
+        </p>
+        <div class="partners-list">
+            <span class="partner-tag">格力电器</span>
+            <span class="partner-tag">河钢股份</span>
+            <span class="partner-tag">中核集团</span>
+            <span class="partner-tag">海螺水泥</span>
+            <span class="partner-tag">中国航天科技</span>
+            <span class="partner-tag">天津大学</span>
+            <span class="partner-tag">沈鼓集团</span>
+            <span class="partner-tag">中船重工</span>
+            <span class="partner-tag">津西重工</span>
+            <span class="partner-tag">中冶银河</span>
+            <span class="partner-tag">山水集团</span>
+            <span class="partner-tag">冀东水泥</span>
+            <span class="partner-tag">三峰透平</span>
+            <span class="partner-tag">中建生态环境</span>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-content">
+            <p style="font-size: 18px; color: #555; margin-bottom: 20px;">
+                期待与您合作，共创绿色高效未来
+            </p>
+            <div class="contact-box">
+                <h3>赛特勒斯集团</h3>
+                <p>📍 地址：北京市（具体地址请来电咨询）</p>
+                <p>📞 电话：请拨打咨询热线获取详细信息</p>
+                <p>✉️ 邮箱：请通过下方按钮联系我们</p>
+                <p>🌐 官网：www.zeitlos.com.cn</p>
+                
+                <a href="mailto:contact@zeitlos.com.cn" class="contact-cta">立即咨询</a>
+            </div>
+            
+            <div style="margin-top: 40px; padding: 30px; background: #f0f7ff; border-radius: 12px;">
+                <h4 style="color: #1e3a5f; margin-bottom: 15px;">为什么选择赛特勒斯？</h4>
+                <p style="color: #555; line-height: 1.8;">
+                    自2014年起，企业在磁悬浮鼓风机生产领域开拓了自己的市场，通过不懈的技术创新树立了优质良好的企业形象。<br>
+                    公司拥有欧美进口精密加工设备多台，采用现代化整机生产流水线，经过ISO9001质量管理体系认证，保证产品生产的高效和成果的品质。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2024 赛特勒斯集团 ZEITLOS GROUP | 磁悬浮技术解决方案领导者</p>
+        <p style="margin-top: 10px; font-size: 12px;">品质第一 · 顾客至上 · 创新发展 · 合作共赢</p>
+    </footer>
+</body>
+</html>
